@@ -1,0 +1,46 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+
+* {
+margin: 0;
+padding: 0;
+}
+
+
+body {
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+font-family: "Lato", sans-serif;
+font-weight: normal;
+background: linear-gradient(to right, #00AAFF, #00FF6C);
+}
+
+input, button, textarea, select {
+font: inherit;
+}
+
+
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+
+.container button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: remove;
+    background: rgba(255,255,255,.75);
+    color: black;
+}
+
+.container button:hover {
+    background: rgba(255,255,255,.9);
+}
