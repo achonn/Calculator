@@ -6,22 +6,15 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
-/* Bugs to fix:
-- Add the "." stuff
-- Add the delete button function
-*/ 
-
-
+// Last bug: When we press equal, do the same operand again
 let currentOperand = '';
 let previousOperand = '';
 let operation = undefined;
 let step = 0;
 
 
-
 let firstNumArray = [];
 let secondNumArray = [];
-
 
 
 function getNumber(number) {
@@ -47,7 +40,6 @@ function chooseOperation(op) {
 }
 
 
-
 function clear() {  
     currentOperand = '';
     previousOperand = '';
@@ -58,7 +50,6 @@ function clear() {
     previousOperandTextElement.innerText = '';
     currentOperandTextElement.innerText = '0';
 }
-
 
 
 function compute() {
