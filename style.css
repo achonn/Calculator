@@ -72,14 +72,45 @@ font: inherit;
 }
 
 
-.output button {
-    width: 20px;
+.output label {
+    width: 40px;
     height: 20px;
-    background-color: white;
-    border-radius: 50%;
+    background-color: #ebebeb;
+    border-radius: 10px;
     position: absolute;
     top: 15px;
     left: 15px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+label::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    background-color: #ffcc89;
+    border-radius: 50%;
+    top: 1px;
+    left: 1px;
+    position: absolute;
+    transition: 1s;
+}
+
+
+input {
+    display: none;
+}
+
+
+input:checked + label{
+    background-color: #242424;
+}
+
+
+input:checked + label:after {
+    transform: translateX(19px);
+    background-color: rgba(79, 79, 79);
 }
 
 
