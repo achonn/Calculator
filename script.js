@@ -6,6 +6,12 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
+/* Bugs to fix:
+- Add the "." stuff
+- Add the delete button function
+- When I press the operations before the equals, it has a bug
+*/ 
+
 
 let currentOperand = '';
 let previousOperand = '';
@@ -20,12 +26,11 @@ let secondNumArray = [];
 
 
 function getNumber(number) {
-    if (step === 0 || step === 1) {
+    if (step === 0) {
         firstNumArray.push(number);
-        step = 1;
         currentOperand = Number(firstNumArray.join(''));
         currentOperandTextElement.innerText = currentOperand;
-    } else if (step === 2) {
+    } else if (step === 1) {
         secondNumArray.push(number);
         currentOperand = Number(secondNumArray.join(''));
         currentOperandTextElement.innerText = currentOperand;
@@ -34,14 +39,15 @@ function getNumber(number) {
 
 
 function chooseOperation(op) {
-    if (step === 1) {
-        step = 2;
+        step = 1;
         operation = op;
         previousOperand = currentOperand;
         previousOperandTextElement.innerText = `${previousOperand} ${operation}`;
+        currentOperandTextElement.innerText = '';
         currentOperand = '';
-    }
 }
+
+
 
 function clear() {  
     currentOperand = '';
