@@ -59,6 +59,7 @@ font: inherit;
 
 
 .output {
+    position: relative;
     grid-column: 1 / -1;
     background: rgb(49, 49, 49);
     display: flex;
@@ -68,6 +69,17 @@ font: inherit;
     padding: 10px;
     word-wrap: break-word;
     word-break: break-all;
+}
+
+
+.output button {
+    width: 20px;
+    height: 20px;
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 15px;
+    left: 15px;
 }
 
 

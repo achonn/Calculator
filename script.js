@@ -5,6 +5,7 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+const toggleButton = document.querySelector('.toggle');
 
 // Last bug: When we press equal, do the same operand again
 let currentOperand = '';
