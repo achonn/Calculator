@@ -96,6 +96,17 @@ function compute() {
 }
 
 
+function deleteNumber() {
+   if (step === 0) {
+    firstNumArray.pop();
+    currentOperand = Number(firstNumArray.join(''));
+   } else if (step ===1) {
+    secondNumArray.pop();
+    currentOperand = Number(secondNumArray.join(''));
+   }
+   currentOperandTextElement.innerText = currentOperand;
+}
+
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
