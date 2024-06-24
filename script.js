@@ -9,7 +9,6 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 /* Bugs to fix:
 - Add the "." stuff
 - Add the delete button function
-- When I press the operations before the equals, it has a bug
 */ 
 
 
@@ -39,12 +38,12 @@ function getNumber(number) {
 
 
 function chooseOperation(op) {
+        compute();
         step = 1;
         operation = op;
         previousOperand = currentOperand;
         previousOperandTextElement.innerText = `${previousOperand} ${operation}`;
         currentOperandTextElement.innerText = '';
-        currentOperand = '';
 }
 
 
