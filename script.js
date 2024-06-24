@@ -8,7 +8,7 @@ const currentOperandTextElement = document.querySelector('[data-current-operand]
 const toggleButton = document.querySelector('#toggle-button');
 let isDarkMode = true;
 
-// Last bug: When we press equal, do the same operand again
+
 let currentOperand = '';
 let previousOperand = '';
 let operation = undefined;
@@ -34,7 +34,10 @@ function getNumber(number) {
 
 
 function chooseOperation(op) {
-        compute();
+        if (currentOperand === '' && previousOperand === '') return;
+        if (currentOperand !== '') {
+            compute();
+        }
         step = 1;
         operation = op;
         previousOperand = currentOperand;
