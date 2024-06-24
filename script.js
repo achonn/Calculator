@@ -7,17 +7,26 @@ const previousOperandTextElement = document.querySelector('[data-previous-operan
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
 
 
-let currentOperand = '';
-let previousOperand = '';
-let operation = undefined;
+let firstNumber
+let secondNumber
+let operation
+
+function getNumber(number) {
+    console.log(number);
+}
 
 
+function chooseOperation(op) {
+    console.log(op);
+}
 
+function clear() {
 
+};
 
 numberButtons.forEach(button => {
     button.addEventListener('click', () => {
-        appendNumber(button.innerText);
+        getNumber(button.innerText);
     })
 })
 
