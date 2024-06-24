@@ -60,9 +60,8 @@ function compute() {
     let result;
     const firstNum = parseFloat(previousOperand);
     const secondNum = parseFloat(currentOperand);
-
+    
     if (isNaN(firstNum) || isNaN(secondNum)) return;
-
 
     switch (operation) {
         case '+':
@@ -80,9 +79,10 @@ function compute() {
         default:
             return;
     }
+
     currentOperandTextElement.innerText = result;
     previousOperandTextElement.innerText = '';
-    currentOperand = result.toString();
+    currentOperand = result;
     previousOperand = '';
     operation = undefined;
     step = 0;
