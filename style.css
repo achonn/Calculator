@@ -33,10 +33,10 @@ font: inherit;
 }
 
 
-.container button {
+button {
     cursor: pointer;
     font-size: 2rem;
-    border: 1px solid rgb(46, 46, 46);
+    border: none;
     outline: remove;
     background: rgba(43, 43, 43, 0.75);
     color: orange;
@@ -123,4 +123,21 @@ input:checked + label:after {
 .output .current-operand {
     font-size: 2.5rem;
     color: white;
+}
+
+
+.white-mode {
+    background: rgba(255,255,255,.75);
+}   
+
+
+.button-white-mode {
+    color: rgb(88, 88, 255);
+    background: rgb(219, 219, 219);
+    border: none;
+}   
+
+
+.output-white-mode {
+    background: rgb(236, 236, 236);
 }

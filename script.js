@@ -5,6 +5,8 @@ const deleteButton = document.querySelector('[data-delete]');
 const allClearButton = document.querySelector('[data-all-clear]');
 const previousOperandTextElement = document.querySelector('[data-previous-operand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
+const toggleButton = document.querySelector('#toggle-button');
+let isDarkMode = true;
 
 // Last bug: When we press equal, do the same operand again
 let currentOperand = '';
@@ -124,3 +126,15 @@ deleteButton.addEventListener('click', button => {
     deleteNumber();
 })
 
+toggleButton.addEventListener('click', () => {
+    isDarkMode = !isDarkMode;
+    let body = document.querySelector('body');
+    let buttons = document.querySelectorAll('button');
+    let output = document.querySelector('.output');
+    
+    body.classList.toggle('white-mode', !isDarkMode);
+    output.classList.toggle('output-white-mode', !isDarkMode);
+    buttons.forEach(button => {
+        button.classList.toggle('button-white-mode', !isDarkMode);
+    });
+});
