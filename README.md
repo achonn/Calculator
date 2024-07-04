@@ -21,7 +21,7 @@ You need a modern web browser to run this project.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your-username/javascript-calculator.git
+   git clone https://github.com/your-username/javascript-calculator.git](https://github.com/achonn/Calculator.git
 
 
 [Live Preview Link!](https://achonn.github.io/Calculator/)
