@@ -9,19 +9,4 @@ This project is a simple calculator implemented in JavaScript. It provides basic
 - Delete function to remove the last digit.
 - Light/Dark mode toggle.
 
-## Getting Started
-
-To get a local copy up and running follow these simple steps down below:
-
-### Prerequisites
-
-You need a modern web browser to run this project.
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/achonn/Calculator.git
-
-
 [Live Preview Link!](https://achonn.github.io/Calculator/)
