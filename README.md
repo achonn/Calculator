@@ -1,6 +1,6 @@
 # JavaScript Calculator
 
-This project is a simple calculator implemented in JavaScript. It provides basic arithmetic operations and supports a light/dark mode toggle.
+This project is a calculator implemented in pure JavaScript. It provides basic arithmetic operations and supports a light/dark mode toggle.
 
 ## Features
 
